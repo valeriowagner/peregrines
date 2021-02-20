@@ -1,0 +1,145 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+	color: #fff;
+	font-size: 15px;
+}
+
+body {
+	background-color: #141414;
+	padding: 50px 0;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 50px;
+}
+
+h2 {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+nav {
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #2E2E2E;
+}
+
+nav	a {
+	margin-right: 25px;
+}
+
+.container {
+	width: 60%;
+	margin: auto;
+}
+
+.content {
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid #2E2E2E;
+}
+
+
+/*
+Landing
+*/
+
+.modules {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 25px;
+}
+
+.module {
+	align-items: center;
+	text-align: center;
+}
+
+.module img {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
+}
+
+.module h2 {
+	margin-top: 15px;
+}
+
+a:hover h2 {
+	text-decoration: underline;
+}
+
+/*
+Module page
+*/
+
+.title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.title .return {
+	width: 25px;
+	height: 25px;
+	margin-right: 15px;
+}
+
+.title polygon {
+	fill: #2E2E2E;
+	transition: fill .3s ease;
+}
+
+.title .return:hover polygon {
+	fill: #fff;
+}
+
+.title h1 {
+	margin-bottom: 0;
+}
+
+.banner {
+	width: 100%;
+	margin-bottom: 50px
+}
+
+.procedure {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 25px;
+	grid-row-gap: 25px
+}
+
+.procedure .step p {
+	margin-bottom: 10px
+}
+
+.procedure .step img {
+	display: block;
+	width: 100%;
+}
+
+.image-big {
+	margin-bottom: 50px;
+}
+
+.image-big img {
+	max-width: 100%;
+}
