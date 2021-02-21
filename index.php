@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>DCS</title>
-
-	<meta charset="UTF-8">
-	<meta name="description" content="DCS World Documentation">
-	<meta name="keywords" content="DCS, World, Documentation">
-	<meta name="author" content="PEREGRINES">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" type="text/css" href="style/style.css">
-
-</head>
+<?php 
+	require_once( 'head.php' );
+?>
 <body>
 
 	<div class="container">

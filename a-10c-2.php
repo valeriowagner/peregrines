@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>DCS</title>
-
-	<meta charset="UTF-8">
-	<meta name="description" content="DCS World Documentation">
-	<meta name="keywords" content="DCS, World, Documentation">
-	<meta name="author" content="PEREGRINES">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" type="text/css" href="style/style.css">
-
-</head>
+<?php 
+	require_once( 'head.php' );
+	require_once( 'core.php' );
+?>
 <body>
 
 	<div class="container">
@@ -44,30 +34,13 @@
 				
 				<?php
 
-					$coldstartFilesRaw = scandir( 'img/modules/a-10c-2/coldstart/' );
-					$coldstartFiles = array_diff($coldstartFilesRaw, array('.', '..'));
-
-					sort($coldstartFiles, SORT_NATURAL);
+					$coldstartUrl = 'img/modules/a-10c-2/coldstart/';
 
 					$comments = [
-						19 => 'Only after rearm!'
+						19 => 'After rearm!'
 					];
 
-					foreach ( $coldstartFiles as $c => $file ) {
-						
-						$c++;
-
-						echo( '<div class="step">
-							<p>' . $c . '.' );
-
-						if ( isset($comments[$c]) ){
-							echo( ' ' . $comments[$c] );
-						}
-
-						echo( '</p>
-							<img src="img/modules/a-10c-2/coldstart/' . $file . '">
-						</div>');
-					}
+					procedure( $coldstartUrl, $comments );
 
 				?>
 

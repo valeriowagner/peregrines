@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>DCS</title>
-
-	<meta charset="UTF-8">
-	<meta name="description" content="DCS World Documentation">
-	<meta name="keywords" content="DCS, World, Documentation">
-	<meta name="author" content="PEREGRINES">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" type="text/css" href="style/style.css">
-
-</head>
+<?php 
+	require_once( 'head.php' );
+	require_once( 'core.php' );
+?>
 <body>
 
 	<div class="container">
@@ -33,43 +23,28 @@
 		<nav>
 			
 			<a href="#coldstart">Cold Start</a>
+			<a href="#air-air">Air / Air</a>
 			<a href="#landing">Landing</a>
 
 		</nav>
 
 		<div id="coldstart" class="content">
 			
-			<h2>Cold Start</h2>
+			<h1>Cold Start</h1>
 
 			<div class="procedure">
 				
 				<?php
 
-					$coldstartFilesRaw = scandir( 'img/modules/fa-18c/coldstart/' );
-					$coldstartFiles = array_diff($coldstartFilesRaw, array('.', '..'));
-
-					sort($coldstartFiles, SORT_NATURAL);
+					$coldstartUrl = 'img/modules/fa-18c/coldstart/';
 
 					$comments = [
-						5 => 'When RPM over 20%',
-						14 => 'When RPM over 20%'
+						5 => 'When RPM more than 20%',
+						14 => 'When RPM more than 20%',
+						27 => 'Check on AMPCD if INS is aligned'
 					];
 
-					foreach ( $coldstartFiles as $c => $file ) {
-						
-						$c++;
-
-						echo( '<div class="step">
-							<p>' . $c . '.' );
-
-						if ( isset($comments[$c]) ){
-							echo( ' ' . $comments[$c] );
-						}
-
-						echo( '</p>
-							<img src="img/modules/fa-18c/coldstart/' . $file . '">
-						</div>');
-					}
+					procedure( $coldstartUrl, $comments );
 
 				?>
 
@@ -77,9 +52,76 @@
 
 		</div>
 
+		<div id="air-air" class="content">
+			
+			<h1>Air / Air</h1>
+
+			<h2>IR Missiles</h2>
+
+			<div class="procedure">
+				
+				<?php
+
+					$coldstartUrl = 'img/modules/fa-18c/missiles/ir/';
+
+					$comments = [
+						3 => '"Select Sidewinder" keybind',
+					];
+
+					procedure( $coldstartUrl, $comments );
+
+				?>
+
+				<div class="note">
+					
+					<h3>Note:</h3>
+
+					<ul>
+						<li>Select desired ACM mode with "Sensor Control Switch"</li>
+						<li>Place seeker over the target to get a lock</li>
+						<li>Fire missile when flashing "SHOOT" appears</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<h2>Radar Missiles</h2>
+
+			<div class="procedure">
+				
+				<?php
+
+					$coldstartUrl = 'img/modules/fa-18c/missiles/radar/';
+
+					$comments = [
+						3 => '"Select AMRAAM" or "Select Sparrow" keybind',
+						4 => '"Throttle Designator Controller" keybinds',
+						5 => '"Throttle Designator Controller - Depress" keybind'
+					];
+
+					procedure( $coldstartUrl, $comments );
+
+				?>
+
+				<div class="note">
+					
+					<h3>Note:</h3>
+
+					<ul>
+						<li>Range depends on loaded missile</li>
+						<li>Place Normalized In-Range Display (NIRD) over steering dot</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		</div>
+
 		<div id="landing" class="content">
 				
-			<h2>Landing</h2>
+			<h1>Landing</h1>
 
 			<h3>Field pattern</h3>
 
