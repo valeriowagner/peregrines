@@ -24,9 +24,14 @@
 			
 			<a href="#coldstart">Cold Start</a>
 			<a href="#air-air">Air / Air</a>
+			<a href="#air-ground">Air / Ground</a>
 			<a href="#landing">Landing</a>
 
 		</nav>
+
+		<!--
+			COLDSTART
+		-->
 
 		<div id="coldstart" class="content">
 			
@@ -36,7 +41,7 @@
 				
 				<?php
 
-					$coldstartUrl = 'img/modules/fa-18c/coldstart/';
+					$url = 'img/modules/fa-18c/coldstart/';
 
 					$comments = [
 						5 => 'When RPM more than 20%',
@@ -44,13 +49,17 @@
 						27 => 'Check on AMPCD if INS is aligned'
 					];
 
-					procedure( $coldstartUrl, $comments );
+					procedure( $url, $comments );
 
 				?>
 
 			</div>
 
 		</div>
+
+		<!--
+			AIR / AIR
+		-->
 
 		<div id="air-air" class="content">
 			
@@ -62,13 +71,13 @@
 				
 				<?php
 
-					$coldstartUrl = 'img/modules/fa-18c/missiles/ir/';
+					$url = 'img/modules/fa-18c/a2a/ir/';
 
 					$comments = [
 						3 => '"Select Sidewinder" keybind',
 					];
 
-					procedure( $coldstartUrl, $comments );
+					procedure( $url, $comments );
 
 				?>
 
@@ -92,7 +101,7 @@
 				
 				<?php
 
-					$coldstartUrl = 'img/modules/fa-18c/missiles/radar/';
+					$url = 'img/modules/fa-18c/a2a/radar/';
 
 					$comments = [
 						3 => '"Select AMRAAM" or "Select Sparrow" keybind',
@@ -100,7 +109,7 @@
 						5 => '"Throttle Designator Controller - Depress" keybind'
 					];
 
-					procedure( $coldstartUrl, $comments );
+					procedure( $url, $comments );
 
 				?>
 
@@ -118,6 +127,61 @@
 			</div>
 
 		</div>
+
+		<!--
+			AIR / GROUND
+		-->
+
+		<div id="air-ground" class="content">
+			
+			<h1>Air / Ground</h1>
+
+			<h2>GPS Bombs</h2>
+
+			<div class="procedure">
+				
+				<?php
+
+					$url = 'img/modules/fa-18c/a2g/gps/';
+
+					$comments = [
+						12 => 'When coordinates showing in MSN lock successful',
+						15 => 'ATRK = static Target, PTRK = moving target',
+						16 => 'Move FLIR with TDC controlls'
+					];
+
+					procedure( $url, $comments );
+
+				?>
+
+			</div>
+
+			<h2>Laser Bombs</h2>
+
+			<div class="procedure">
+				
+				<?php
+
+					$url = 'img/modules/fa-18c/a2g/laser/';
+
+					$comments = [
+						12 => 'Match code with FLIR code',
+						14 => 'QTY = amount, MULT = distance',
+						20 => 'Align velocity vector (VV) with vertical line',
+						21 => 'Release when horizontal line reaches VV'
+					];
+
+					procedure( $url, $comments );
+
+				?>
+
+			</div>
+
+		</div>
+
+		<!--
+			LANDING
+		-->
 
 		<div id="landing" class="content">
 				

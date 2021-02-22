@@ -36,11 +36,11 @@
 
 					$coldstartUrl = 'img/modules/a-10c-2/coldstart/';
 
-					$comments = [
+					$coldstartComments = [
 						19 => 'After rearm!'
 					];
 
-					procedure( $coldstartUrl, $comments );
+					procedure( $coldstartUrl, $coldstartComments );
 
 				?>
 
