@@ -4,6 +4,12 @@
 ?>
 <body>
 
+	<a href="#">
+		<div id="top">
+			<img src="img/top.png" alt="Top">
+		</div>
+	</a>
+
 	<div class="container">
 
 		<div class="title">
@@ -49,6 +55,8 @@
 		</div>
 
 	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>
