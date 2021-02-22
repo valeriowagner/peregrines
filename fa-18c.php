@@ -4,6 +4,12 @@
 ?>
 <body>
 
+	<a href="#">
+		<div id="top">
+			<img src="img/top.png" alt="Top">
+		</div>
+	</a>
+
 	<div class="container">
 
 		<div class="title">
@@ -35,10 +41,10 @@
 
 		<div id="coldstart" class="content">
 			
-			<h1>Cold Start</h1>
-
 			<div class="procedure">
 				
+				<h1>Cold Start</h1>
+
 				<?php
 
 					$url = 'img/modules/fa-18c/coldstart/';
@@ -70,10 +76,10 @@
 				<a href="#radar-missiles">Radar Missiles</a>
 			</nav>
 
-			<h2>IR Missiles</h2>
-
 			<div id="ir-missiles" class="procedure">
 				
+				<h2>IR Missiles</h2>
+
 				<?php
 
 					$url = 'img/modules/fa-18c/a2a/ir/';
@@ -100,10 +106,10 @@
 
 			</div>
 
-			<h2>Radar Missiles</h2>
-
 			<div id="radar-missiles" class="procedure">
 				
+				<h2>Radar Missiles</h2>
+
 				<?php
 
 					$url = 'img/modules/fa-18c/a2a/radar/';
@@ -142,14 +148,14 @@
 			<h1>Air / Ground</h1>
 
 			<nav>
-				<a href="#gps-bombs">IR Bombs</a>
-				<a href="#laser-bombs">Radar Bombs</a>
+				<a href="#gps-bombs">GPS Bombs</a>
+				<a href="#laser-bombs">Laser Bombs</a>
 			</nav>
-
-			<h2>GPS Bombs</h2>
 
 			<div id="gps-bombs" class="procedure">
 				
+				<h2>GPS Bombs</h2>
+
 				<?php
 
 					$url = 'img/modules/fa-18c/a2g/gps/';
@@ -166,10 +172,10 @@
 
 			</div>
 
-			<h2>Laser Bombs</h2>
-
 			<div id="laser-bombs" class="procedure">
 				
+				<h2>Laser Bombs</h2>
+
 				<?php
 
 					$url = 'img/modules/fa-18c/a2g/laser/';
@@ -212,6 +218,8 @@
 		</div>
 
 	</div>
+
+	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>

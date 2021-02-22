@@ -1,14 +1,22 @@
+:root {
+	--white: #ffffff;
+	--dark: #141414;
+	--darkgray: #3B3B3B;
+	--gray: #8C8C8C;
+}
+
 * {
+	scroll-behavior: smooth;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Arial', sans-serif;
-	color: #fff;
+	color: var( --white );
 	font-size: 15px;
 }
 
 body {
-	background-color: #141414;
+	background-color: var( --dark );
 	padding: 50px 0;
 }
 
@@ -31,18 +39,38 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 nav {
 	padding-bottom: 50px;
 	margin-bottom: 50px;
-	border-bottom: 1px solid #2E2E2E;
+	border-bottom: 1px solid var( --darkgray );
 }
 
 nav	a {
+	position: relative;
 	margin-right: 25px;
+	transition: color .2s ease;
+}
+
+nav a:hover {
+	color: var( --gray );
+}
+
+#top {
+	position: fixed;
+	width: 100px;
+	right: 50px;
+	bottom: -100%;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,1);
+	transition: bottom 1s ease;
+}
+
+#top img {
+	display: block;
+	width: 100%;
+}
+
+#top.show {
+	bottom: 0;
 }
 
 .container {
@@ -53,9 +81,8 @@ nav	a {
 .content {
 	padding-bottom: 50px;
 	margin-bottom: 50px;
-	border-bottom: 1px solid #FFF;
+	border-bottom: 1px solid var( --white );
 }
-
 
 /*
 Landing
@@ -70,20 +97,35 @@ Landing
 .module {
 	align-items: center;
 	text-align: center;
+	overflow: hidden;
 }
 
-.module img {
+.module .image {
+	width: 100%;
+	padding-top: 100%;
+	background-size: 100%;
+	background-position: center center;
+	border-radius: 5px;
+	transition: background-size .3s ease;
+}
+
+.module:hover .image {
+	background-size: 110%;
+}
+
+/*.module img {
 	display: block;
 	width: 100%;
 	border-radius: 5px;
 }
 
+.module:hover img {
+	width: 110%;
+}*/
+
 .module h2 {
 	margin-top: 15px;
-}
-
-a:hover h2 {
-	text-decoration: underline;
+	margin-bottom: 0;
 }
 
 /*
@@ -103,12 +145,12 @@ Module page
 }
 
 .title polygon {
-	fill: #2E2E2E;
+	fill: var( --darkgray );
 	transition: fill .3s ease;
 }
 
 .title .return:hover polygon {
-	fill: #fff;
+	fill: var( --white );
 }
 
 .title h1 {
@@ -129,6 +171,16 @@ Module page
 
 .procedure:not(last-child) {
 	margin-bottom: 50px;
+}
+
+.procedure h1 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.procedure h2 {
+	grid-column-start: 1;
+	grid-column-end: 3;
 }
 
 .procedure .step {
