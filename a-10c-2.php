@@ -31,6 +31,7 @@
 		<nav>
 			
 			<a href="#coldstart">Cold Start</a>
+			<a href="#downloads">Downloads</a>
 
 		</nav>
 
@@ -56,7 +57,24 @@
 
 		</div>
 
+		<div id="downloads" class="content">
+			
+			<h1>Downloads</h1>
+
+			<ul>
+
+				<li><a href="files/a-10c-2-guide-en.pdf">Official Guide</a></li>
+			
+			</ul>
+			
+
+		</div>
+
 	</div>
+
+	<?php 
+		require_once( 'footer.php' );
+	?>
 
 	<script type="text/javascript" src="js/main.js"></script>
 

@@ -34,6 +34,7 @@
 			<a href="#air-air">Air / Air</a>
 			<a href="#air-ground">Air / Ground</a>
 			<a href="#landing">Landing</a>
+			<a href="#downloads">Downloads</a>
 
 		</nav>
 
@@ -43,9 +44,9 @@
 
 		<div id="coldstart" class="content">
 			
+			<h1>Cold Start</h1>
+
 			<div class="procedure">
-				
-				<h1>Cold Start</h1>
 
 				<?php
 
@@ -78,62 +79,70 @@
 				<a href="#radar-missiles">Radar Missiles</a>
 			</nav>
 
-			<div id="ir-missiles" class="procedure">
-				
+			<div id="ir-missiles">
+
 				<h2>IR Missiles</h2>
 
-				<?php
+				<div class="procedure">
 
-					$url = 'img/modules/fa-18c/a2a/ir/';
+					<?php
 
-					$comments = [
-						3 => '"Select Sidewinder" keybind',
-					];
+						$url = 'img/modules/fa-18c/a2a/ir/';
 
-					procedure( $url, $comments );
+						$comments = [
+							3 => '"Select Sidewinder" keybind',
+						];
 
-				?>
+						procedure( $url, $comments );
 
-				<div class="note">
-					
-					<h3>Note:</h3>
+					?>
 
-					<ul>
-						<li>Select desired ACM mode with "Sensor Control Switch"</li>
-						<li>Place seeker over the target to get a lock</li>
-						<li>Fire missile when flashing "SHOOT" appears</li>
-					</ul>
+					<div class="note">
+						
+						<h3>Note:</h3>
+
+						<ul>
+							<li>Select desired ACM mode with "Sensor Control Switch"</li>
+							<li>Place seeker over the target to get a lock</li>
+							<li>Fire missile when flashing "SHOOT" appears</li>
+						</ul>
+
+					</div>
 
 				</div>
 
 			</div>
 
-			<div id="radar-missiles" class="procedure">
-				
+			<div id="radar-missiles">
+
 				<h2>Radar Missiles</h2>
 
-				<?php
+				<div class="procedure">
 
-					$url = 'img/modules/fa-18c/a2a/radar/';
+					<?php
 
-					$comments = [
-						3 => '"Select AMRAAM" or "Select Sparrow" keybind',
-						4 => '"Throttle Designator Controller" keybinds',
-						5 => '"Throttle Designator Controller - Depress" keybind'
-					];
+						$url = 'img/modules/fa-18c/a2a/radar/';
 
-					procedure( $url, $comments );
+						$comments = [
+							3 => '"Select AMRAAM" or "Select Sparrow" keybind',
+							4 => '"Throttle Designator Controller" keybinds',
+							5 => '"Throttle Designator Controller - Depress" keybind'
+						];
 
-				?>
+						procedure( $url, $comments );
 
-				<div class="note">
-					
-					<h3>Note:</h3>
+					?>
 
-					<ul>
-						<li>Range depends on loaded missile</li>
-						<li>Place Normalized In-Range Display (NIRD) over steering dot</li>
-					</ul>
+					<div class="note">
+						
+						<h3>Note:</h3>
+
+						<ul>
+							<li>Range depends on loaded missile</li>
+							<li>Place Normalized In-Range Display (NIRD) over steering dot</li>
+						</ul>
+
+					</div>
 
 				</div>
 
@@ -154,44 +163,52 @@
 				<a href="#laser-bombs">Laser Bombs</a>
 			</nav>
 
-			<div id="gps-bombs" class="procedure">
-				
+			<div id="gps-bombs">
+
 				<h2>GPS Bombs</h2>
 
-				<?php
+				<div class="procedure">
 
-					$url = 'img/modules/fa-18c/a2g/gps/';
+					<?php
 
-					$comments = [
-						12 => 'When coordinates showing in MSN lock successful',
-						15 => 'ATRK = static Target, PTRK = moving target',
-						16 => 'Move FLIR with TDC controlls'
-					];
+						$url = 'img/modules/fa-18c/a2g/gps/';
 
-					procedure( $url, $comments );
+						$comments = [
+							12 => 'When coordinates showing in MSN lock successful',
+							15 => 'ATRK = static Target, PTRK = moving target',
+							16 => 'Move FLIR with TDC controlls'
+						];
 
-				?>
+						procedure( $url, $comments );
+
+					?>
+
+				</div>
 
 			</div>
 
-			<div id="laser-bombs" class="procedure">
+			<div id="laser-bombs">
 				
 				<h2>Laser Bombs</h2>
+				
+				<div id="laser-bombs" class="procedure">
 
-				<?php
+					<?php
 
-					$url = 'img/modules/fa-18c/a2g/laser/';
+						$url = 'img/modules/fa-18c/a2g/laser/';
 
-					$comments = [
-						12 => 'Match code with FLIR code',
-						14 => 'QTY = amount, MULT = distance',
-						20 => 'Align velocity vector (VV) with vertical line',
-						21 => 'Release when horizontal line reaches VV'
-					];
+						$comments = [
+							12 => 'Match code with FLIR code',
+							14 => 'QTY = amount, MULT = distance',
+							20 => 'Align velocity vector (VV) with vertical line',
+							21 => 'Release when horizontal line reaches VV'
+						];
 
-					procedure( $url, $comments );
+						procedure( $url, $comments );
 
-				?>
+					?>
+
+				</div>
 
 			</div>
 
@@ -219,7 +236,24 @@
 
 		</div>
 
+		<div id="downloads" class="content">
+			
+			<h1>Downloads</h1>
+
+			<ul>
+
+				<li><a href="files/fa-18c-guide-en.pdf">Official Guide</a></li>
+			
+			</ul>
+			
+
+		</div>
+
 	</div>
+
+	<?php 
+		require_once( 'footer.php' );
+	?>
 
 	<script type="text/javascript" src="js/main.js"></script>
 

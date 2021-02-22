@@ -16,8 +16,10 @@
 }
 
 body {
+	min-height: 100vh;
 	background-color: var( --dark );
 	padding: 50px 0;
+	display: grid;
 }
 
 h1 {
@@ -77,8 +79,9 @@ nav a:hover {
 }
 
 .container {
+	align-self: start;
 	width: 60%;
-	margin: auto;
+	margin: 0 auto;
 }
 
 .content {
@@ -95,6 +98,11 @@ Landing
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 25px;
+}
+
+.modules h1 {
+	grid-column-start: 1;
+	grid-column-end: 5;
 }
 
 .module {
@@ -218,6 +226,70 @@ Module page
 .image-big img {
 	max-width: 100%;
 }
+
+#downloads a {
+	position: relative;
+	color: var( --white );
+	transition: color .3s ease
+}
+
+#downloads a::after {
+	content: '';
+	display: block;
+	width: 15px;
+	height: 15px;
+	background-image: url( '../img/download.svg' );
+	position: absolute;
+	right: -25px;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity .3s ease
+}
+
+#downloads a:hover::after {
+	opacity: 1;
+}
+
+#downloads ul {
+	margin-left: 17px;
+}	
+
+#downloads li {
+	margin-left: 0; 
+	padding-left: 0;
+	margin-bottom: 10px;
+}
+
+/*
+Footer
+*/
+
+footer {
+	align-self: end;
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer .logo {
+	width: 100px;
+}
+
+footer a {
+	color: var( --gray );
+	transition: color .3s ease;
+}
+
+footer a:hover {
+	color: var( --white );
+}
+
+/*
+Media Queries
+*/
 
 @media (max-width: 900px) {
 

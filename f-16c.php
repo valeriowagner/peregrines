@@ -4,6 +4,14 @@
 ?>
 <body>
 
+	<a href="#">
+		<div id="top">
+			<?php
+				include 'img/top.svg';
+			?>		
+		</div>
+	</a>
+
 	<div class="container">
 
 		<div class="title">
@@ -18,11 +26,12 @@
 
 		</div>
 
-		<img class="banner" src="img/modules/a-10c-2/f-16c-banner.jpg" alt="F-16C">
+		<img class="banner" src="img/modules/f-16c/f-16c-banner.jpg" alt="F-16C">
 
 		<nav>
 			
 			<a href="#coldstart">Cold Start</a>
+			<a href="#downloads">Downloads</a>
 
 		</nav>
 
@@ -48,7 +57,26 @@
 
 		</div>
 
+		<div id="downloads" class="content">
+			
+			<h1>Downloads</h1>
+
+			<ul>
+
+				<li><a href="files/f-16c-guide-en.pdf">Official Guide</a></li>
+			
+			</ul>
+			
+
+		</div>
+
 	</div>
+
+	<?php 
+		require_once( 'footer.php' );
+	?>
+
+	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>

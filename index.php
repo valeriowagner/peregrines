@@ -5,10 +5,10 @@
 
 	<div class="container">
 
-		<h1>DCS World Documentation</h1>
-
 		<div class="modules">
 			
+			<h1>Modules</h1>
+
 			<a href="fa-18c.php">
 				<div class="module">
 					<div class="image" style="background-image: url('img/modules/fa-18c/fa-18c.jpg')"></div>
@@ -23,9 +23,20 @@
 				</div>
 			</a>
 
+			<a href="f-16c.php">
+				<div class="module">
+					<div class="image" style="background-image: url('img/modules/f-16c/f-16c.jpg')"></div>
+					<h2>F-16C</h2>
+				</div>
+			</a>
+
 		</div>
 
 	</div>
+
+	<?php 
+		require_once( 'footer.php' );
+	?>
 
 </body>
 </html>
