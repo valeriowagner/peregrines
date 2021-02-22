@@ -16,7 +16,7 @@
 				</div>
 			</a>
 
-			<a href="a-10c.php">
+			<a href="a-10c-2.php">
 				<div class="module">
 					<div class="image" style="background-image: url('img/modules/a-10c-2/a-10c-2.jpg')"></div>
 					<h2>A-10C II</h2>
