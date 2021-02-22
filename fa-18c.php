@@ -44,8 +44,8 @@
 					$url = 'img/modules/fa-18c/coldstart/';
 
 					$comments = [
-						5 => 'When RPM more than 20%',
-						14 => 'When RPM more than 20%',
+						5 => 'When right RPM more than 20%',
+						14 => 'When left RPM more than 20%',
 						27 => 'Check on AMPCD if INS is aligned'
 					];
 

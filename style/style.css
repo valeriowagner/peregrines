@@ -24,7 +24,7 @@ h2 {
 
 h3 {
 	font-size: 15px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 a {
@@ -129,6 +129,12 @@ Module page
 
 .procedure:not(last-child) {
 	margin-bottom: 50px;
+}
+
+.procedure .step {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .procedure .step p {

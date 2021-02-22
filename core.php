@@ -12,18 +12,15 @@
 			$c++;
 
 			echo( '<div class="step">
-				<h3>' . $c . '.' );
+				<h3>Step ' . $c . '</h3>' );
 
 			if ( isset($comments[$c]) ){
-				echo( ' ' . $comments[$c] );
+				echo( '<p>' . $comments[$c] . '</p>' );
 			}
 
-			echo( '</h3>
-				<img src="' . $url . $file . '">
+			echo( '<img src="' . $url . $file . '">
 			</div>');
 
 		}
 
 	}
-
-?>
