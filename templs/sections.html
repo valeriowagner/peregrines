@@ -1,0 +1,17 @@
+
+<!-- we get sections -->
+<nav>
+|for section in sections|
+	<a href="#|esc section.name|">|esc section.title|</a>
+|end|
+</nav>
+
+|for section in sections|
+<div id="|esc section.name|" class="content">
+				
+	<h1>|esc section.title|</h1>
+
+	|section.display()|
+
+</div>
+|end|
