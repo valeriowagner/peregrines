@@ -20,50 +20,58 @@
 	|section 'air-air', 'Air / Air'|
 
 		<nav>
-			<a href="#ir-missiles">IR Missiles</a>
-			<a href="#radar-missiles">Radar Missiles</a>
+			<a href="#ir-missiles-a2a">IR Missiles A/A</a>
+			<a href="#radar-missiles-a2a">Radar Missiles A/A</a>
 		</nav>
 
-		<div id="ir-missiles" class="procedure">
-			
-			<h2>IR Missiles</h2>
+		<div id="ir-missiles-a2a">
 
-			|procedure 'fa-18c/a2a/ir/', [
-				3 => '"Select Sidewinder" keybind'
-			]|
+			<h2>IR Missiles A/A</h2>
 
-			<div class="note">
-				
-				<h3>Note:</h3>
+			<div class="procedure">
 
-				<ul>
-					<li>Select desired ACM mode with "Sensor Control Switch"</li>
-					<li>Place seeker over the target to get a lock</li>
-					<li>Fire missile when flashing "SHOOT" appears</li>
-				</ul>
+				|procedure 'fa-18c/a2a/ir/', [
+					3 => '"Select Sidewinder" keybind'
+				]|
+
+				<div class="note">
+					
+					<h3>Note:</h3>
+
+					<ul>
+						<li>Select desired ACM mode with "Sensor Control Switch"</li>
+						<li>Place seeker over the target to get a lock</li>
+						<li>Fire missile when flashing "SHOOT" appears</li>
+					</ul>
+
+				</div>
 
 			</div>
 
 		</div>
 
-		<div id="radar-missiles" class="procedure">
-			
-			<h2>Radar Missiles</h2>
+		<div id="radar-missiles-a2a">
 
-			|procedure 'fa-18c/a2a/radar/', [
-				3 => '"Select AMRAAM" or "Select Sparrow" keybind',
-				4 => '"Throttle Designator Controller" keybinds',
-				5 => '"Throttle Designator Controller - Depress" keybind'
-			]|
+			<h2>Radar Missiles A/A</h2>
 
-			<div class="note">
-				
-				<h3>Note:</h3>
+			<div class="procedure">
 
-				<ul>
-					<li>Range depends on loaded missile</li>
-					<li>Place Normalized In-Range Display (NIRD) over steering dot</li>
-				</ul>
+				|procedure 'fa-18c/a2a/radar/', [
+					3 => '"Select AMRAAM" or "Select Sparrow" keybind',
+					4 => '"Throttle Designator Controller" keybinds',
+					5 => '"Throttle Designator Controller - Depress" keybind'
+				]|
+
+				<div class="note">
+					
+					<h3>Note:</h3>
+
+					<ul>
+						<li>Range depends on loaded missile</li>
+						<li>Place Normalized In-Range Display (NIRD) over steering dot</li>
+					</ul>
+
+				</div>
 
 			</div>
 
@@ -74,38 +82,63 @@
 	|section 'air-ground', 'Air / Ground'|
 
 		<nav>
-			<a href="#gps-bombs">GPS Bombs</a>
-			<a href="#laser-bombs">Laser Bombs</a>
+			<a href="#gps-bombs-a2g">GPS Bombs A/G</a>
+			<a href="#laser-bombs-a2g">Laser Bombs A/G</a>
+			<a href="#ir-missiles-a2g">IR Missiles A/G</a>
 		</nav>
 
-		<div id="gps-bombs" class="procedure">
-			
-			<h2>GPS Bombs</h2>
+		<div id="gps-bombs-a2g">
 
-			|procedure 'fa-18c/a2g/gps/', [
-				12 => 'When coordinates showing in MSN lock successful',
-				15 => 'ATRK = static Target, PTRK = moving target',
-				16 => 'Move FLIR with TDC controlls'
-			]|
+			<h2>GPS Bombs A/G</h2>
+
+			<div class="procedure">
+
+				|procedure 'fa-18c/a2g/gps/', [
+					12 => 'When coordinates showing in MSN lock successful',
+					15 => 'ATRK = static Target, PTRK = moving target',
+					16 => 'Move FLIR with TDC controlls'
+				]|
+
+			</div>
 
 		</div>
 
-		<div id="laser-bombs" class="procedure">
+		<div id="laser-bombs-a2g">
 			
-			<h2>Laser Bombs</h2>
+			<h2>Laser Bombs A/G</h2>
+			
+			<div class="procedure">
 
-			|procedure 'fa-18c/a2g/laser/', [
-				12 => 'Match code with FLIR code',
-				14 => 'QTY = amount, MULT = distance',
-				20 => 'Align velocity vector (VV) with vertical line',
-				21 => 'Release when horizontal line reaches VV'
-			]|
+				|procedure 'fa-18c/a2g/laser/', [
+					12 => 'Match code with FLIR code',
+					14 => 'QTY = amount, MULT = distance',
+					20 => 'Align velocity vector (VV) with vertical line',
+					21 => 'Release when horizontal line reaches VV'
+				]|
+
+			</div>
+
+		</div>
+
+		<div id="ir-missiles-a2g">
+			
+			<h2>IR Missiles A/G</h2>
+			
+			<div class="procedure">
+
+				|procedure 'fa-18c/a2g/ir/', [
+					6 => 'Hold TDC Depress to move camera'
+				]|
+
+			</div>
 
 		</div>
 
 	|end|
 
 	|section 'landing', 'Landing'|
+
+		<h1>Landing</h1>
 
 		<h3>Field pattern</h3>
 
@@ -118,6 +151,14 @@
 		<div class="image-big">
 			<img src="img/modules/fa-18c/landing/carrier-pattern.jpg">
 		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+			<li><a href="files/fa-18c-guide-en.pdf">Official Guide</a></li>
+		</ul>
 
 	|end|
 
