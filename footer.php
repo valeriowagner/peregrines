@@ -6,6 +6,9 @@
 		?>
 	</div>
 
-	<a href="https://discord.gg/zQhT9ccv">Discord</a>
+	<div class="links">
+		<a href="https://discord.gg/zQhT9ccv">Discord</a>
+		<a href="https://github.com/valeriowagner/peregrines">GitHub</a>
+	</div>
 
 </footer>

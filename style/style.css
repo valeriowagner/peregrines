@@ -281,6 +281,7 @@ footer .logo {
 footer a {
 	color: var( --gray );
 	transition: color .3s ease;
+	margin-right: 25px;
 }
 
 footer a:hover {
@@ -320,6 +321,10 @@ Media Queries
 		width: 100%;
 	}
 
+	footer {
+		width: 100%;
+	}
+
 }
 
 @media (max-width: 600px) {
@@ -354,6 +359,11 @@ Media Queries
 
 	.modules {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.modules h1 {
+		grid-column-start: 1;
+		grid-column-end: 3;
 	}
 
 }
