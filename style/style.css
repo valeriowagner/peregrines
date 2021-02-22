@@ -60,11 +60,14 @@ nav a:hover {
 	width: 100px;
 	right: 50px;
 	bottom: -100%;
-	box-shadow: 0 0 15px 0 rgba(0,0,0,1);
 	transition: bottom 1s ease;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.5)
 }
 
-#top img {
+#top svg {
 	display: block;
 	width: 100%;
 }
@@ -214,4 +217,71 @@ Module page
 
 .image-big img {
 	max-width: 100%;
+}
+
+@media (max-width: 900px) {
+
+	* {
+		font-size: 15px;
+	}
+
+	h1 {
+		font-size: 25px;
+		margin-bottom: 25px;
+	}
+
+	h2 {
+		font-size: 17px;
+		margin-bottom: 17px;
+	}
+
+	h3 {
+		font-size: 15px;
+		margin-bottom: 15px;
+	}
+
+	body {
+		padding: 50px;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	* {
+		font-size: 12px;
+	}
+
+	h1 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		font-size: 15px;
+		margin-bottom: 15px;
+	}
+
+	h3 {
+		font-size: 12px;
+		margin-bottom: 12px;
+	}
+
+	body {
+		padding: 25px;
+	}
+
+	#top {
+		width: 75px;
+		right: 25px;
+	}
+
+	.modules {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
 }

@@ -6,7 +6,9 @@
 
 	<a href="#">
 		<div id="top">
-			<img src="img/top.png" alt="Top">
+			<?php
+				include 'img/top.svg';
+			?>		
 		</div>
 	</a>
 
