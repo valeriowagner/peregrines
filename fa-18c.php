@@ -75,13 +75,13 @@
 			<h1>Air / Air</h1>
 
 			<nav>
-				<a href="#ir-missiles">IR Missiles</a>
-				<a href="#radar-missiles">Radar Missiles</a>
+				<a href="#ir-missiles-a2a">IR Missiles A/A</a>
+				<a href="#radar-missiles-a2a">Radar Missiles A/A</a>
 			</nav>
 
-			<div id="ir-missiles">
+			<div id="ir-missiles-a2a">
 
-				<h2>IR Missiles</h2>
+				<h2>IR Missiles A/A</h2>
 
 				<div class="procedure">
 
@@ -113,9 +113,9 @@
 
 			</div>
 
-			<div id="radar-missiles">
+			<div id="radar-missiles-a2a">
 
-				<h2>Radar Missiles</h2>
+				<h2>Radar Missiles A/A</h2>
 
 				<div class="procedure">
 
@@ -159,13 +159,14 @@
 			<h1>Air / Ground</h1>
 
 			<nav>
-				<a href="#gps-bombs">GPS Bombs</a>
-				<a href="#laser-bombs">Laser Bombs</a>
+				<a href="#gps-bombs-a2g">GPS Bombs A/G</a>
+				<a href="#laser-bombs-a2g">Laser Bombs A/G</a>
+				<a href="#ir-missiles-a2g">IR Missiles A/G</a>
 			</nav>
 
-			<div id="gps-bombs">
+			<div id="gps-bombs-a2g">
 
-				<h2>GPS Bombs</h2>
+				<h2>GPS Bombs A/G</h2>
 
 				<div class="procedure">
 
@@ -187,11 +188,11 @@
 
 			</div>
 
-			<div id="laser-bombs">
+			<div id="laser-bombs-a2g">
 				
-				<h2>Laser Bombs</h2>
+				<h2>Laser Bombs A/G</h2>
 				
-				<div id="laser-bombs" class="procedure">
+				<div class="procedure">
 
 					<?php
 
@@ -202,6 +203,28 @@
 							14 => 'QTY = amount, MULT = distance',
 							20 => 'Align velocity vector (VV) with vertical line',
 							21 => 'Release when horizontal line reaches VV'
+						];
+
+						procedure( $url, $comments );
+
+					?>
+
+				</div>
+
+			</div>
+
+			<div id="ir-missiles-a2g">
+				
+				<h2>IR Missiles A/G</h2>
+				
+				<div class="procedure">
+
+					<?php
+
+						$url = 'img/modules/fa-18c/a2g/ir/';
+
+						$comments = [
+							6 => 'Hold TDC Depress to move camera'
 						];
 
 						procedure( $url, $comments );
