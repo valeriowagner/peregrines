@@ -58,16 +58,21 @@
 		</div>
 
 		<!--
-			AIR / AIR
+		AIR / AIR
 		-->
 
 		<div id="air-air" class="content">
 			
 			<h1>Air / Air</h1>
 
+			<nav>
+				<a href="#ir-missiles">IR Missiles</a>
+				<a href="#radar-missiles">Radar Missiles</a>
+			</nav>
+
 			<h2>IR Missiles</h2>
 
-			<div class="procedure">
+			<div id="ir-missiles" class="procedure">
 				
 				<?php
 
@@ -97,7 +102,7 @@
 
 			<h2>Radar Missiles</h2>
 
-			<div class="procedure">
+			<div id="radar-missiles" class="procedure">
 				
 				<?php
 
@@ -136,9 +141,14 @@
 			
 			<h1>Air / Ground</h1>
 
+			<nav>
+				<a href="#gps-bombs">IR Bombs</a>
+				<a href="#laser-bombs">Radar Bombs</a>
+			</nav>
+
 			<h2>GPS Bombs</h2>
 
-			<div class="procedure">
+			<div id="gps-bombs" class="procedure">
 				
 				<?php
 
@@ -158,7 +168,7 @@
 
 			<h2>Laser Bombs</h2>
 
-			<div class="procedure">
+			<div id="laser-bombs" class="procedure">
 				
 				<?php
 
