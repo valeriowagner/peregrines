@@ -30,9 +30,6 @@ if ( !is_file(PAGES_PATH. $file. '.html') ) {
 	die;
 }
 
-
-
-
 // loadSvg
 function loadSvg(string $path) {
 	include $path;
@@ -57,24 +54,33 @@ class Sections {
 
 	protected static $sections = [];
 
-	protected static $active = null;
+	// [ layer => section ]
+	protected static $active = [];
 
-	public static function start(string $name, string $title = null) {
-		self::$active = new Section($name, $title);
+	public static function start(string $layer, string $name, string $title) {
+		self::$active[$layer] = new Section($name, $title);
 		ob_start();
 	}
 
-	public static function end() {
-		if (is_null(self::$active))
-			throw new Exception('active not defined');
-		self::$active->ctn = ob_get_clean();
-		self::$sections[] = self::$active;
-		self::$active = null;
+	public static function end(string $layer) {
+		if (!isset(self::$active[$layer]))
+			throw new Exception($layer.' not started' );
+		self::$active[$layer]->ctn = ob_get_clean();
+
+		if (!isset(self::$sections[$layer]))
+			self::$sections[$layer] = [];
+		self::$sections[$layer][] = self::$active[$layer];
+
+		unset(self::$active[$layer]);
 	}
 
-	public static function all() {
-		$sections = self::$sections;
-		self::$sections = [];
+	public static function all(string $layer) {
+		if (!isset(self::$sections[$layer]))
+			throw new Exception($layer.' not started' );
+		if (isset(self::$active[$layer]))
+			throw new Exception($layer.' end not called' );
+		$sections = self::$sections[$layer];
+		self::$sections[$layer] = [];
 		return $sections;
 	}
 
@@ -98,11 +104,13 @@ class Section {
 	}
 }
 
-function displaySections(string $name = '') {
-	templ('sections', ['sections' => Sections::all()]);
+function displaySections(string $layer) {
+	templ('sections', [
+		'sections' => Sections::all($layer),
+		'layer' => $layer
+	]);
 }
-$engine->addFn('section', 'section');
-
+$engine->addFn('displaySections', 'displaySections');
 
 // procedure
 function procedure( $url, $comments ) {

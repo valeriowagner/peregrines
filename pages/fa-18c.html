@@ -8,25 +8,20 @@
 	|section 'coldstart', 'Cold Start'|
 
 		<div class="procedure">
+
 			|procedure 'fa-18c/coldstart/', [
 				5 => 'When right RPM more than 20%',
 				14 => 'When left RPM more than 20%',
 				27 => 'Check on AMPCD if INS is aligned'
 			]|
+
 		</div>
 
 	|end|
 
 	|section 'air-air', 'Air / Air'|
 
-		<nav>
-			<a href="#ir-missiles-a2a">IR Missiles A/A</a>
-			<a href="#radar-missiles-a2a">Radar Missiles A/A</a>
-		</nav>
-
-		<div id="ir-missiles-a2a">
-
-			<h2>IR Missiles A/A</h2>
+		|subSection 'ir-missiles-a2a', 'IR Missiles A/A'|
 
 			<div class="procedure">
 
@@ -48,11 +43,10 @@
 
 			</div>
 
-		</div>
+		|end|
 
-		<div id="radar-missiles-a2a">
 
-			<h2>Radar Missiles A/A</h2>
+		|subSection 'radar-missiles-a2a', 'Radar Missiles A/A'|
 
 			<div class="procedure">
 
@@ -75,21 +69,15 @@
 
 			</div>
 
-		</div>
+		|end|
+
+		|displaySections 'sub'|
 
 	|end|
 
 	|section 'air-ground', 'Air / Ground'|
 
-		<nav>
-			<a href="#gps-bombs-a2g">GPS Bombs A/G</a>
-			<a href="#laser-bombs-a2g">Laser Bombs A/G</a>
-			<a href="#ir-missiles-a2g">IR Missiles A/G</a>
-		</nav>
-
-		<div id="gps-bombs-a2g">
-
-			<h2>GPS Bombs A/G</h2>
+		|subSection 'gps-bombs-a2g', 'GPS Bombs A/G'|
 
 			<div class="procedure">
 
@@ -101,11 +89,9 @@
 
 			</div>
 
-		</div>
+		|end|
 
-		<div id="laser-bombs-a2g">
-			
-			<h2>Laser Bombs A/G</h2>
+		|subSection 'laser-bombs-a2g', 'Laser Bombs A/G'|
 			
 			<div class="procedure">
 
@@ -118,11 +104,9 @@
 
 			</div>
 
-		</div>
+		|end|
 
-		<div id="ir-missiles-a2g">
-			
-			<h2>IR Missiles A/G</h2>
+		|subSection 'ir-missiles-a2g', 'IR Bombs A/G'|
 			
 			<div class="procedure">
 
@@ -132,13 +116,13 @@
 
 			</div>
 
-		</div>
+		|end|
+
+		|displaySections 'sub'|
 
 	|end|
 
 	|section 'landing', 'Landing'|
-
-		<h1>Landing</h1>
 
 		<h3>Field pattern</h3>
 
@@ -162,7 +146,7 @@
 
 	|end|
 
-	|displaySections()|
+	|displaySections 'main'|
 
 |end|
 

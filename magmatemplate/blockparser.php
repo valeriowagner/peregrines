@@ -48,7 +48,7 @@ class BlockParser {
 	protected function checkType( string $block ) {
 
 		$matches = [
-			'/^(if|for|block|section|elif)\s/',
+			'/^(if|for|block|section|subSection|elif)\s/',
 			'/^(else|end)$/',
 			'/^[A-Za-z0-9.\[\]]*\s*(=|[+\/\-*.]=)(?=\s)/'
 		];
@@ -114,9 +114,11 @@ class BlockParser {
 				break;
 
 			case 'section':
+			case 'subSection':
+				$layer = $type === 'section' ? 'main' : 'sub'; 
 				$exp = $this->baseReplace( $exp );
-				$this->tree = [ $type, null, $this->tree ];
-				$o = sprintf( 'Sections::start( %s );', $exp );
+				$this->tree = [ $type, $layer, $this->tree ];
+				$o = sprintf( 'Sections::start( "%s", %s );', $layer, $exp );
 				break;
 
 		}
@@ -132,7 +134,7 @@ class BlockParser {
 		$type = $block;
 
 		if ( count( $tree ) !== 3 )
-			throw new Error( 'cannot end a statement when no statement is opened' );
+			throw new \Error( 'cannot end a statement when no statement is opened' );
 
 		$o = '';
 
@@ -169,9 +171,10 @@ class BlockParser {
 				break;
 
 			case 'section':
+			case 'subSection':
 
 				$this->tree = $tree[2];
-				$o = 'Sections::end();';
+				$o = 'Sections::end("'.$tree[1].'");';
 				break;
 
 		}
