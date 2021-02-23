@@ -1,9 +1,7 @@
 |block 'main'|
 
-	|templ 'header', [
-		'title' => 'F/A-18C',
-		'banner' => 'fa-18c/fa-18c-banner.jpg'
-	]|
+	|title = 'F/A-18C'|
+	|mainHeader title, 'fa-18c/fa-18c-banner.jpg'|
 
 	|section 'coldstart', 'Cold Start'|
 
@@ -150,4 +148,4 @@
 
 |end|
 
-|inc 'pages/base'|
+|inc 'pages/base', ['title' => title]|

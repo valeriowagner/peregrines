@@ -45,9 +45,15 @@ $engine->addFn('templ', 'templ');
 
 // url
 function url(string $url = '') {
-	return DEBUG ? '/peregrines/'. $url : $url;
+	return DEBUG ? '/peregrines/'. $url : '/'. $url;
 }
 $engine->addFn('url', 'url');
+
+// url
+function mainHeader(string $title, string $banner) {
+	templ('mainheader', [ 'title' => $title, 'banner' => $banner ]);
+}
+$engine->addFn('mainHeader', 'mainHeader');
 
 // section
 class Sections {
