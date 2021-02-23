@@ -127,7 +127,7 @@ function procedure( $url, $comments ) {
 
 	sort($files, SORT_NATURAL);
 
-	templ('procedures', ['files' => $files, 'url' => $url]);
+	templ('procedures', ['files' => $files, 'url' => $url, 'comments' => $comments]);
 }
 $engine->addFn('procedure', 'procedure');
 
