@@ -45,9 +45,15 @@ $engine->addFn('templ', 'templ');
 
 // url
 function url(string $url = '') {
-	return DEBUG ? '/peregrines/'. $url : $url;
+	return DEBUG ? '/peregrines/'. $url : '/'. $url;
 }
 $engine->addFn('url', 'url');
+
+// url
+function mainHeader(string $title, string $banner) {
+	templ('mainheader', [ 'title' => $title, 'banner' => $banner ]);
+}
+$engine->addFn('mainHeader', 'mainHeader');
 
 // section
 class Sections {
@@ -121,7 +127,7 @@ function procedure( $url, $comments ) {
 
 	sort($files, SORT_NATURAL);
 
-	templ('procedures', ['files' => $files, 'url' => $url]);
+	templ('procedures', ['files' => $files, 'url' => $url, 'comments' => $comments]);
 }
 $engine->addFn('procedure', 'procedure');
 

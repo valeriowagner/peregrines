@@ -1,16 +1,14 @@
 |block 'main'|
 
-	|templ 'header', [
-		'title' => 'A-10C II',
-		'banner' => 'a-10c-2/a-10c-2-banner.jpg'
-	]|
+	|title = 'A-10C II'|
+	|mainHeader title, 'a-10c-2/a-10c-2-banner.jpg'|
 
 	|section 'coldstart', 'Cold Start'|
 
 		<div class="procedure">
 
 			|procedure 'a-10c-2/coldstart/', [
-					19 => 'After rearm!'
+				19 => 'After rearm!'
 			]|
 
 		</div>
@@ -31,4 +29,4 @@
 
 |end|
 
-|inc 'pages/base'|
+|inc 'pages/base', ['title' => title]|

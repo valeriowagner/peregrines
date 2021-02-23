@@ -1,9 +1,7 @@
 |block 'main'|
-
-	|templ 'header', [
-		'title' => 'F-16C',
-		'banner' => 'f-16c/f-16c-banner.jpg'
-	]|
+	
+	|title = 'F-16C'|
+	|mainHeader title, 'f-16c/f-16c-banner.jpg'|
 
 	|section 'coldstart', 'Cold Start'|
 
@@ -29,4 +27,4 @@
 
 |end|
 
-|inc 'pages/base'|
+|inc 'pages/base', ['title' => title]|
