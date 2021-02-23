@@ -1,0 +1,44 @@
+|block 'main'|
+	
+	|title = 'MiG-21bis'|
+	|mainHeader title, 'mig-21bis/mig-21bis-banner.jpg'|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+		
+			|procedure 'mig-21bis/coldstart/', [
+				12 => 'Radio Compass, Radio Altimeter, Navigation System, GIRO, Horizontal Situation Indicator, Autopilot, Autopilot pitch'
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'weapons-on', 'Weapons Start'|
+
+		<div class="procedure">
+		
+			|procedure 'mig-21bis/weapons/', [
+				1 => 'Only needed if IR or radar missiles are loaded'
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+
+			<li><a href="files/mig-21bis-guide-en.pdf">Official Guide</a></li>
+		
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base', ['title' => title]|
