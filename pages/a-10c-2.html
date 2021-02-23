@@ -1,0 +1,34 @@
+|block 'main'|
+
+	|templ 'header', [
+		'title' => 'A-10C II',
+		'banner' => 'a-10c-2/a-10c-2-banner.jpg'
+	]|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+
+			|procedure 'a-10c-2/coldstart/', [
+					19 => 'After rearm!'
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+
+			<li><a href="files/a-10c-2-guide-en.pdf">Official Guide</a></li>
+		
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base'|

@@ -1,0 +1,153 @@
+|block 'main'|
+
+	|templ 'header', [
+		'title' => 'F/A-18C',
+		'banner' => 'fa-18c/fa-18c-banner.jpg'
+	]|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+
+			|procedure 'fa-18c/coldstart/', [
+				5 => 'When right RPM more than 20%',
+				14 => 'When left RPM more than 20%',
+				27 => 'Check on AMPCD if INS is aligned'
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'air-air', 'Air / Air'|
+
+		|subSection 'ir-missiles-a2a', 'IR Missiles A/A'|
+
+			<div class="procedure">
+
+				|procedure 'fa-18c/a2a/ir/', [
+					3 => '"Select Sidewinder" keybind'
+				]|
+
+				<div class="note">
+					
+					<h3>Note:</h3>
+
+					<ul>
+						<li>Select desired ACM mode with "Sensor Control Switch"</li>
+						<li>Place seeker over the target to get a lock</li>
+						<li>Fire missile when flashing "SHOOT" appears</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		|end|
+
+
+		|subSection 'radar-missiles-a2a', 'Radar Missiles A/A'|
+
+			<div class="procedure">
+
+				|procedure 'fa-18c/a2a/radar/', [
+					3 => '"Select AMRAAM" or "Select Sparrow" keybind',
+					4 => '"Throttle Designator Controller" keybinds',
+					5 => '"Throttle Designator Controller - Depress" keybind'
+				]|
+
+				<div class="note">
+					
+					<h3>Note:</h3>
+
+					<ul>
+						<li>Range depends on loaded missile</li>
+						<li>Place Normalized In-Range Display (NIRD) over steering dot</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+		|end|
+
+		|displaySections 'sub'|
+
+	|end|
+
+	|section 'air-ground', 'Air / Ground'|
+
+		|subSection 'gps-bombs-a2g', 'GPS Bombs A/G'|
+
+			<div class="procedure">
+
+				|procedure 'fa-18c/a2g/gps/', [
+					12 => 'When coordinates showing in MSN lock successful',
+					15 => 'ATRK = static Target, PTRK = moving target',
+					16 => 'Move FLIR with TDC controlls'
+				]|
+
+			</div>
+
+		|end|
+
+		|subSection 'laser-bombs-a2g', 'Laser Bombs A/G'|
+			
+			<div class="procedure">
+
+				|procedure 'fa-18c/a2g/laser/', [
+					12 => 'Match code with FLIR code',
+					14 => 'QTY = amount, MULT = distance',
+					20 => 'Align velocity vector (VV) with vertical line',
+					21 => 'Release when horizontal line reaches VV'
+				]|
+
+			</div>
+
+		|end|
+
+		|subSection 'ir-missiles-a2g', 'IR Bombs A/G'|
+			
+			<div class="procedure">
+
+				|procedure 'fa-18c/a2g/ir/', [
+					6 => 'Hold TDC Depress to move camera'
+				]|
+
+			</div>
+
+		|end|
+
+		|displaySections 'sub'|
+
+	|end|
+
+	|section 'landing', 'Landing'|
+
+		<h3>Field pattern</h3>
+
+		<div class="image-big">
+			<img src="img/modules/fa-18c/landing/field-pattern.jpg">
+		</div>
+		
+		<h3>Carrier landing pattern</h3>
+
+		<div class="image-big">
+			<img src="img/modules/fa-18c/landing/carrier-pattern.jpg">
+		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+			<li><a href="files/fa-18c-guide-en.pdf">Official Guide</a></li>
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base'|

@@ -1,0 +1,13 @@
+|for c, file in files|
+
+	|i = c + 1|
+	
+	<div class="step">
+		<h3>Step |esc i|</h3>
+		|if isset( comments[ i ] )|
+			<p>|comments[ i ]|</p>
+		|end|
+		<img src="|url. file|">
+	</div>
+
+|end|

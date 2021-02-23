@@ -1,0 +1,21 @@
+|main = 'main'|
+<!-- we get sections -->
+<nav>
+|for section in sections|
+	<a href="#|esc section.name|">|esc section.title|</a>
+|end|
+</nav>
+
+|for section in sections|
+<div id="|esc section.name|" |if layer == main| class="content" |end| >
+
+	|if layer == main|		
+	<h1>|esc section.title|</h1>
+	|else|
+	<h2>|esc section.title|</h2>
+	|end|
+
+	|section.display()|
+
+</div>
+|end|

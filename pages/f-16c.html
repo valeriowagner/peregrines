@@ -1,0 +1,32 @@
+|block 'main'|
+
+	|templ 'header', [
+		'title' => 'F-16C',
+		'banner' => 'f-16c/f-16c-banner.jpg'
+	]|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+		
+			|procedure 'f-16c/coldstart/', []|
+
+		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+
+			<li><a href="files/f-16c-guide-en.pdf">Official Guide</a></li>
+		
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base'|
