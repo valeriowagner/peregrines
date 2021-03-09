@@ -1,0 +1,32 @@
+|block 'main'|
+	
+	|title = 'UH-1H'|
+	|mainHeader title, 'uh-1h/uh-1h-banner.jpg'|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+		
+			|procedure 'uh-1h/coldstart/', [
+				11 => 'Bind "Start-up engine" or use the "Home" key.'
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+
+			<li><a href="files/uh-1h-guide-en.pdf">Official Guide</a></li>
+		
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base', ['title' => title]|
