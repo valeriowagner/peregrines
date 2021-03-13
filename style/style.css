@@ -1,8 +1,8 @@
 :root {
 	--white: #ffffff;
 	--dark: #141414;
-	--darkgray: #3B3B3B;
-	--gray: #8C8C8C;
+	--darkgray: #212121;
+	--lightgray: #8C8C8C;
 }
 
 * {
@@ -54,7 +54,7 @@ nav	a {
 }
 
 nav a:hover {
-	color: var( --gray );
+	color: var( --lightgray );
 }
 
 #top {
@@ -98,11 +98,18 @@ Landing
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 25px;
+	margin-bottom: 50px;
 }
 
-.modules h1 {
+.modules h1, .modules h3 {
 	grid-column-start: 1;
 	grid-column-end: 5;
+}
+
+.modules h3 {
+	margin-bottom: 0;
+	color: var( --lightgray );
+	text-align: center
 }
 
 .module {
@@ -275,9 +282,11 @@ footer {
 	align-self: end;
 	width: 60%;
 	margin: 0 auto;
+	padding-top: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-top: 1px solid var( --darkgray );
 }
 
 footer .logo {
@@ -285,7 +294,7 @@ footer .logo {
 }
 
 footer a {
-	color: var( --gray );
+	color: var( --lightgray );
 	transition: color .3s ease;
 	margin-right: 25px;
 }
