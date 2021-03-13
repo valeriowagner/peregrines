@@ -1,5 +1,9 @@
 |for c, file in files|
 
+	|if c % 2 == 0|
+		<div class="row">
+	|end|
+
 	|i = c + 1|
 	
 	<div class="step">
@@ -9,5 +13,9 @@
 		|end|
 		<img src="|url. file|">
 	</div>
+
+	|if i % 2 == 0 or count( files ) == i|
+		</div>
+	|end|
 
 |end|

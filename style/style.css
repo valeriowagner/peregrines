@@ -173,13 +173,6 @@ Module page
 	margin-bottom: 50px
 }
 
-.procedure {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap: 25px;
-	grid-row-gap: 25px
-}
-
 .procedure:not(last-child) {
 	margin-bottom: 50px;
 }
@@ -192,6 +185,19 @@ Module page
 .procedure h2 {
 	grid-column-start: 1;
 	grid-column-end: 3;
+}
+
+.procedure .row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 25px;
+	margin-bottom: 25px;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+.procedure .row:last-child {
+	margin-bottom: 0;
 }
 
 .procedure .step {
@@ -291,6 +297,22 @@ footer a:hover {
 /*
 Media Queries
 */
+
+@media print {
+
+	#top {
+		display: none;
+	}
+
+	#downloads {
+		display: none;
+	}
+
+	footer {
+		display: none
+	}
+
+}
 
 @media (max-width: 900px) {
 
