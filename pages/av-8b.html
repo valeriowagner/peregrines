@@ -1,0 +1,39 @@
+|block 'main'|
+	
+	|title = 'AV-8B'|
+	|mainHeader title, 'av-8b/av-8b-banner.jpg'|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+		
+			|procedure 'av-8b/coldstart/', [
+				9 => 'When RPM 92',
+				19 => 'RSHIFT + K',
+				20 => 'Type "N" first',
+				22 => 'Type "E" first',
+				24 => 'Type "E" first',
+				25 => 'RSHIFT + K',
+				35 => 'Only when INS aligned',
+				38 => '"Parking Break Lever" is hard to find, hover over this area until button shows up.',
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+
+			<li><a href="files/av-8b-guide-en.pdf" target="_blank">Official Guide</a></li>
+		
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base', ['title' => title]|
