@@ -1,0 +1,42 @@
+|block 'main'|
+	
+	|title = 'P-47D'|
+	|mainHeader title, 'p-47d/p-47d-banner.jpg'|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+		
+			|procedure 'p-47d/coldstart/', [
+				15 => 'This seats the starter brushes'
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'weapons-on', 'Weapons Start'|
+
+		<div class="procedure">
+		
+			|procedure 'p-47d/weapons/', []|
+
+		</div>
+
+	|end|
+
+	|section 'downloads', 'Downloads'|
+
+		<ul>
+
+			<li><a href="files/p-47d-guide-en.pdf" target="_blank">Official Guide</a></li>
+		
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base', ['title' => title]|
