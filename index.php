@@ -7,7 +7,7 @@ define( 'TMP_PATH', './tmp/' );
 
 // CONSTANTS
 define( 'DEBUG', ($_SERVER['HTTP_HOST'] ?? '') === 'localhost' );
-define( 'RAW_REQ_URI', $_SERVER['REQUEST_URI'] ?? '/' );
+define( 'RAW_REQ_URI', strtok($_SERVER['REQUEST_URI'] ?? '/', '?') );
 // REQ_URI if debug remove '/peregrines';
 define( 'REQ_URI', DEBUG ? substr(RAW_REQ_URI, 11) : RAW_REQ_URI );
 
@@ -49,7 +49,13 @@ function url(string $url = '') {
 }
 $engine->addFn('url', 'url');
 
-// url
+// isLive
+function isLive() {
+	return !DEBUG;
+}
+$engine->addFn('isLive', 'isLive');
+
+// mainHeader
 function mainHeader(string $title, string $banner) {
 	templ('mainheader', [ 'title' => $title, 'banner' => $banner ]);
 }
