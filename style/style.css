@@ -2,7 +2,9 @@
 	--white: #ffffff;
 	--dark: #141414;
 	--darkgray: #212121;
+	--gray: #404040;
 	--lightgray: #8C8C8C;
+	--yellow: #ffc832;
 }
 
 * {
@@ -130,16 +132,6 @@ Landing
 	background-size: 110%;
 }
 
-/*.module img {
-	display: block;
-	width: 100%;
-	border-radius: 5px;
-}
-
-.module:hover img {
-	width: 110%;
-}*/
-
 .module h2 {
 	margin-top: 15px;
 	margin-bottom: 0;
@@ -149,10 +141,20 @@ Landing
 Module page
 */
 
-.title {
+/*.title {
 	display: flex;
 	align-items: center;
 	margin-bottom: 25px;
+}*/
+
+.title {
+	z-index: 999;
+	position: sticky;
+	top: 0;
+	padding: 25px 0;
+	background-color: var( --dark );
+	display: flex;
+	align-items: center;
 }
 
 .title .return {
@@ -162,12 +164,12 @@ Module page
 }
 
 .title polygon {
-	fill: var( --darkgray );
+	fill: var( --gray );
 	transition: fill .3s ease;
 }
 
 .title .return:hover polygon {
-	fill: var( --white );
+	fill: var( --yellow );;
 }
 
 .title h1 {
@@ -239,18 +241,18 @@ Module page
 	max-width: 100%;
 }
 
-#downloads a {
+#links a {
 	position: relative;
 	color: var( --white );
 	transition: color .3s ease
 }
 
-#downloads a::after {
+#links a::after {
 	content: '';
 	display: block;
 	width: 15px;
 	height: 15px;
-	background-image: url( '../img/download.svg' );
+	background-image: url( '../img/eye.svg' );
 	position: absolute;
 	right: -25px;
 	top: 50%;
@@ -259,15 +261,15 @@ Module page
 	transition: opacity .3s ease
 }
 
-#downloads a:hover::after {
+#links a:hover::after {
 	opacity: 1;
 }
 
-#downloads ul {
+#links ul {
 	margin-left: 17px;
 }	
 
-#downloads li {
+#links li {
 	margin-left: 0; 
 	padding-left: 0;
 	margin-bottom: 10px;
@@ -295,7 +297,6 @@ footer .logo {
 footer a {
 	color: var( --lightgray );
 	transition: color .3s ease;
-	margin-right: 25px;
 }
 
 footer a:hover {
