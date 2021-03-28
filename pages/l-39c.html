@@ -1,0 +1,31 @@
+|block 'main'|
+	
+	|title = 'L-39C'|
+	|mainHeader title, 'l-39c/l-39c-banner.jpg'|
+
+	|section 'coldstart', 'Cold Start'|
+
+		<div class="procedure">
+		
+			|procedure 'l-39c/coldstart/', [
+				7 => 'Wait until TURBINE STARTER signal flashes before pressing'
+			]|
+
+		</div>
+
+	|end|
+
+	|section 'links', 'Links'|
+
+		<ul>
+			<li><a href="files/l-39c-guide-en.pdf" target="_blank">Flight Manual</a></li>
+			<li><a href="https://www.mudspike.com/chucks-guides-dcs-l-39za-albatros/" target="_blank">Indepth guide by Chuck</a></li>
+		</ul>
+
+	|end|
+
+	|displaySections 'main'|
+
+|end|
+
+|inc 'pages/base', ['title' => title]|
