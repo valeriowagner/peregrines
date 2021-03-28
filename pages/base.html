@@ -4,9 +4,16 @@
 	<title>Peregrines|if isset( title )| - |esc title||end|</title>
 
 	<meta charset="UTF-8">
-	<meta name="description" content="Peregrines">
-	<meta name="keywords" content="Peregrines">
-	<meta name="author" content="Peregrines">
+	|if isset( description )|
+	<meta name="description" content="|esc description|">
+	|end|
+	|if isset( keywords )|
+	<meta name="keywords" content="|esc keywords|">
+	|end|
+	|if !isset( author )|
+		|author = 'Peregrines'|
+	|end|
+	<meta name="author" content="|esc author|">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
