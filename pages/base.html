@@ -4,16 +4,15 @@
 	<title>Peregrines|if isset( title )| - |esc title||end|</title>
 
 	<meta charset="UTF-8">
-	|if isset( description )|
-	<meta name="description" content="|esc description|">
+
+	|if !isset( allmetatags()['author'] )|
+		<!-- add author if not already set -->
+		|metatags(['author' => 'Peregrines'])|
 	|end|
-	|if isset( keywords )|
-	<meta name="keywords" content="|esc keywords|">
+
+	|for name, content in allmetatags()|
+	<meta name="|esc name|" content="|esc content|">
 	|end|
-	|if !isset( author )|
-		|author = 'Peregrines'|
-	|end|
-	<meta name="author" content="|esc author|">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">

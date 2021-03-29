@@ -137,8 +137,32 @@ function procedure( $url, $comments ) {
 }
 $engine->addFn('procedure', 'procedure');
 
+
+class MetaTags {
+	// key value store
+	// if value already present's appends to it with a space
+	protected static $list = [];
+
+	public static function add(string $key, string $value) {
+		if (isset(self::$list[$key]))
+			self::$list[$key] .= ' '. $value;
+		else
+			self::$list[$key] = $value;
+	}
+
+	public static function all() {
+		return self::$list;
+	}
+}
+
+// list == $key_value store
+function metatags(array $list) {
+	foreach ($list as $key => $value)
+		MetaTags::add($key, $value);
+}
+$engine->addFn('metatags', 'metatags');
+$engine->addFn('allmetatags', 'MetaTags::all');
+
+
 // now load the page
 $engine->go( PAGES_PATH. $file, [], DEBUG );
-
-
-
